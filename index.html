@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<HTML>
+<html>
     <head>
         <title>bug tracker</title>
+        <script src="script.js" defer></script>
 
     </head>
     <body>
 
-        <form>
+        <form id="bugForm">
+            <label for="title">Bug Title:</label>
+            <input type="text" id="title" name="title" required>
 
-            
+            <label for="desc">Describe the Bug:</label>
+            <textarea id="desc" name="desc" required placeholder="describe the bug..."></textarea>
+
+<!-- placeholder gives a hint instead of pre-filled content-->
+
+            <label for="severity">Choose a Severity:</label>
+            <select name="severity" id="severity" required>
+                <option value="Low">LOW</option>
+                <option value="Medium">MEDIUM</option>
+                <option value="High">HIGH</option>
+            </select>
+            <button type="submit">SUBMIT</button>
         </form>
+        <h2>Reported Bugs</h2>
+        <ul id="bugList"></ul>
 
 
 
     </body>
-</HTML>
+</html>
